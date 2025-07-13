@@ -1,15 +1,19 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
+import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import TextPlugin from 'gsap/TextPlugin';
+import Landing1 from '../Landing/Landing1';
 
 gsap.registerPlugin(TextPlugin);
 
 const Loading = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const titleRef = useRef();
   const subtitleRef = useRef();
 
   useGSAP(() => {
+    
     gsap.fromTo(
       titleRef.current,
       { opacity: 0,y:-10, scale: 0.9 },
@@ -25,11 +29,53 @@ const Loading = () => {
       x:-600,
       opacity:0
     
-    },{x:0,opacity:1,duration:0.8,ease:'power2.out',delay:0.1})
+    },{x:0,opacity:1,duration:0.8,ease:'power2.out',delay:0.1,
+      
+    });
+
+
+
+    {/*gsap.to(titleRef.current, {
+      opacity:0,
+      scale:4,
+      duration:1.5,
+      delay:3
+    });
+    gsap.to(subtitleRef.current, {
+      opacity:0,
+      text:' ',
+      delay:3,
+      duration:1.5,
+    });
+
+    gsap.to('#loadingCircle',{
+      x:600,
+      opacity:0,
+      duration:3,
+      delay:3
+    });
+
+    gsap.to('#loadingSection',{
+      backgroundColor:'white',
+      duration:1,
+      delay:3,
+    })*/}
+    gsap.to('#loadingSection',{
+      scale:100,
+      duration:2.4,
+      delay:3,
+      translate:'54% 0',
+      onComplete: () => {
+        setIsLoading(true);
+      }
+    
+    })
   }, []);
 
   return (
-    <section
+    <>
+    {!isLoading ? (
+    <section id='loadingSection'
       className="w-full h-screen flex flex-col justify-center items-center bg-[#302c72] relative"
     >
       {/* SVG Circle as background */}
@@ -53,6 +99,11 @@ const Loading = () => {
        
       </h3>
     </section>
+    ) : (
+      <Landing1/>
+    )
+    }
+    </>
   );
 };
 
