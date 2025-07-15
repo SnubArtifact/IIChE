@@ -24,19 +24,19 @@ const Navbar = () => {
 
       {/* Main Navigation */}
       <div className='flex ml-70  gap-28'>
-        <button className='text-lg font-medium font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
+        <button className=' hover:text-[#4a45ad] text-lg font-medium font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
           Home
         </button>
-        <button className='text-lg font-medium font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
+        <button className='transition-color duration-500 hover:text-[#4a45ad] text-lg font-medium font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
           About IIChE
         </button>
-        <button className='text-lg font-medium font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
+        <button className='transition-color duration-500 text-lg font-medium hover:text-[#4a45ad] font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
           Events
         </button>
-        <button className='text-lg font-medium font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
-          Committees
+        <button className='transition-color duration-500 text-lg font-medium font-[sora] hover:text-[#4a45ad] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
+          Committees    
         </button>
-        <button className='text-lg font-medium font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
+        <button className='transition-color duration-500 hover:text-[#4a45ad] text-lg font-medium font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
           Contact us
         </button>
       </div>

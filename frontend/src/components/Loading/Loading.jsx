@@ -60,16 +60,7 @@ const Loading = () => {
       duration:1,
       delay:3,
     })*/}
-    gsap.to('#loadingSection',{
-      scale:100,
-      duration:2.4,
-      delay:3,
-      translate:'54% 0',
-      onComplete: () => {
-        setIsLoading(true);
-      }
     
-    })
   }, []);
 
   return (
