@@ -65,7 +65,7 @@ const Loading = () => {
 
   return (
     <>
-    {!isLoading ? (
+    
     <section id='loadingSection'
       className="w-full h-screen flex flex-col justify-center items-center bg-[#302c72] relative"
     >
@@ -90,10 +90,7 @@ const Loading = () => {
        
       </h3>
     </section>
-    ) : (
-      <Landing1/>
-    )
-    }
+    
     </>
   );
 };
