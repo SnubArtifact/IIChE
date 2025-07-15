@@ -14,7 +14,7 @@ const Navbar = () => {
     });
 
   return (
-    <div id='navbar' className='shadow-xl bg-white w-full h-20 flex items-center justify-between px-8'>
+    <div id='navbar' className='shadow-xl bg-white w-full h-20 flex items-center  px-8'>
       {/* Logo */}
       <img 
         src='/images/iiche logo.png' 
@@ -23,36 +23,25 @@ const Navbar = () => {
       />
 
       {/* Main Navigation */}
-      <div className='flex gap-12'>
-        <button className='text-lg font-bold font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
+      <div className='flex ml-70  gap-28'>
+        <button className='text-lg font-medium font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
           Home
         </button>
-        <button className='text-lg font-bold font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
+        <button className='text-lg font-medium font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
           About IIChE
         </button>
-        <button className='text-lg font-bold font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
+        <button className='text-lg font-medium font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
           Events
         </button>
-        <button className='text-lg font-bold font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
+        <button className='text-lg font-medium font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
           Committees
+        </button>
+        <button className='text-lg font-medium font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
+          Contact us
         </button>
       </div>
 
-      {/* Auth Buttons */}
-      <div className='flex items-center gap-6'>
-        <button className='text-lg font-bold font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
-          Login
-        </button>
-        <div className='flex items-center gap-2'>
-          <button className='text-lg font-bold font-[sora] text-[#302c72] cursor-pointer hover:text-[#1a1558]'>
-            Register
-          </button>
-          <AccountCircleIcon 
-            className='!text-[#302c72]' 
-            sx={{ fontSize: 28 }} 
-          />
-        </div>
-      </div>
+     
     </div>
   );
 };
