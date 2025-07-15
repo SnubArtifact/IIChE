@@ -14,12 +14,13 @@ const Navbar = () => {
     });
 
   return (
-    <div id='navbar' className='shadow-xl bg-white w-full h-20 flex items-center  px-8'>
+    <div id='navbar' className='shadow-xl bg-[#2f2c72] w-full h-20 flex items-center  px-8'>
       {/* Logo */}
       <img 
         src='/images/iiche logo.png' 
         alt='iiche logo' 
         className='w-12 h-12 cursor-pointer'
+      
       />
 
       {/* Main Navigation */}

@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import TextPlugin from 'gsap/TextPlugin';
 import Landing1 from '../Landing/Landing1';
-
+import Navbar from '../Navbar/Navbar';
 gsap.registerPlugin(TextPlugin);
 
 const Loading = () => {
@@ -33,6 +33,9 @@ const Loading = () => {
       
     });
 
+   
+    
+
 
 
     {/*gsap.to(titleRef.current, {
@@ -60,15 +63,26 @@ const Loading = () => {
       duration:1,
       delay:3,
     })*/}
+    gsap.to('#loadingSection',{
+      scale:125,
+      duration:2,
+      translate:'54% 0',
+      delay:4,
+    })
+
+
     
   }, []);
 
   return (
     <>
+  
     
+    {!isLoading  ? (
     <section id='loadingSection'
       className="w-full h-screen flex flex-col justify-center items-center bg-[#302c72] relative"
     >
+      
       {/* SVG Circle as background */}
       <svg width="1000" height="500" style={{ zIndex: 1, position: 'absolute', left: '50%', top: '50%', transform: 'translate(-73%, -50%)' }}>
         <circle id='loadingCircle' cx="50%" cy="50%" r="250" fill="white" />
@@ -89,7 +103,11 @@ const Loading = () => {
        
        
       </h3>
-    </section>
+    </section>) 
+    :
+    (
+      <Landing1/>)
+}
     
     </>
   );
